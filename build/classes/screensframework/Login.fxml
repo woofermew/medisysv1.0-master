@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.LoginController">
+  <children>
+      <ImageView fx:id="backGround" fitHeight="720.0" fitWidth="1024.0" layoutX="1.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../login%20page%20bg.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D height="720.0" width="1024.0" />
+         </viewport>
+      </ImageView>
+      <VBox layoutX="364.0" layoutY="158.0" spacing="20.0" AnchorPane.bottomAnchor="216.0" AnchorPane.leftAnchor="364.0" AnchorPane.rightAnchor="363.0" AnchorPane.topAnchor="158.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="390.0" layoutY="119.0" prefHeight="286.0" prefWidth="297.0" spacing="20.0" AnchorPane.bottomAnchor="315.0" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="119.0">
+               <children>
+                  <ImageView fitHeight="172.0" fitWidth="200.0" layoutX="540.0" layoutY="124.0">
+                     <image>
+                        <Image url="@../logo.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" layoutX="520.0" layoutY="326.0" prefHeight="26.0" prefWidth="234.0" AnchorPane.leftAnchor="520.0" AnchorPane.rightAnchor="526.0">
+                     <children>
+                        <Label layoutX="281.0" layoutY="259.0" prefHeight="16.0" prefWidth="74.0" text="Username: " />
+                        <TextField fx:id="username" alignment="TOP_LEFT" layoutX="365.0" layoutY="254.0" prefHeight="26.0" prefWidth="162.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="520.0" layoutY="368.0" prefHeight="26.0" prefWidth="234.0" AnchorPane.leftAnchor="520.0" AnchorPane.rightAnchor="526.0">
+                     <children>
+                        <Label layoutX="283.0" layoutY="326.0" text="Password:  " />
+                        <PasswordField fx:id="password" layoutX="356.0" layoutY="325.0" onAction="#LoginUser" prefHeight="26.0" prefWidth="161.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="label" alignment="CENTER" layoutX="524.0" layoutY="406.0" prefHeight="16.0" prefWidth="234.0" text="Sign In" AnchorPane.leftAnchor="524.0" AnchorPane.rightAnchor="522.0">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="390.0" layoutY="444.0" prefHeight="26.0" prefWidth="282.0" spacing="20.0" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="352.0">
+               <children>
+            <Button layoutX="317.0" layoutY="422.0" mnemonicParsing="false" onAction="#LoginUser" onMouseClicked="#LoginUser" text="Login" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="closeButton" layoutX="931.0" layoutY="659.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Exit" />
+  </children>
+</AnchorPane>

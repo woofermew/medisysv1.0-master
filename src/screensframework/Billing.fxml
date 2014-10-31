@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.BillingController">
+   <children>
+      <SplitPane dividerPositions="0.15" layoutX="320.0" layoutY="99.0" orientation="VERTICAL" prefHeight="780.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: skyblue;" SplitPane.resizableWithParent="false">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="380.0" layoutY="77.0" prefHeight="50.0" prefWidth="530.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#goToLanding" prefHeight="50.0" prefWidth="105.0" text="Home">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="175.0" layoutY="72.0" mnemonicParsing="false" onAction="#openCalendarSwing" prefHeight="50.0" prefWidth="105.0" text="Calendar">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="270.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToPatient" prefHeight="50.0" prefWidth="100.0" text="Patient">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="353.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToNotes" prefHeight="50.0" prefWidth="100.0" text="Notes">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="461.0" layoutY="72.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Billing">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <Label layoutX="260.0" layoutY="78.0" text="BILLING" AnchorPane.bottomAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="761.0" layoutY="14.0" spacing="10.0" AnchorPane.bottomAnchor="65.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="822.0" layoutY="22.0" spacing="5.0">
+                           <children>
+                              <Label layoutX="822.0" layoutY="22.0" text="Welcome back" />
+                              <Label layoutX="906.0" layoutY="22.0" text="Doctor" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="logoutButton" layoutX="954.0" layoutY="18.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout" />
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="105.0" fitWidth="250.0" AnchorPane.bottomAnchor="0.0">
+                     <image>
+                        <Image url="@../medisysnavilogo.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <HBox layoutX="200.0" layoutY="99.0" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="99.0">
+                     <children>
+                        <HBox layoutX="196.0" layoutY="123.0" spacing="20.0">
+                           <children>
+                              <Text layoutX="105.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID:" />
+                              <TextField layoutX="178.0" layoutY="88.0" prefHeight="26.0" prefWidth="111.0" />
+                           </children>
+                           <padding>
+                              <Insets right="50.0" top="30.0" />
+                           </padding>
+                        </HBox>
+                        <GridPane alignment="BOTTOM_RIGHT" layoutX="458.0" layoutY="95.0" prefHeight="294.0" prefWidth="414.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="83.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="207.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="0.0" prefWidth="161.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label GridPane.columnIndex="2" />
+                              <TextField fx:id="typeOne" prefHeight="26.0" prefWidth="437.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="totalInputOne" prefHeight="26.0" prefWidth="170.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="typeTwo" prefHeight="26.0" prefWidth="437.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="totalInputTwo" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField fx:id="typeThree" prefHeight="26.0" prefWidth="437.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="totalInputThree" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <TextField fx:id="typeFour" prefHeight="26.0" prefWidth="437.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="totalInputFour" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <TextField fx:id="typeFive" prefHeight="26.0" prefWidth="437.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="totalInputFive" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <MenuButton mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Select" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Medibank" />
+                                  <MenuItem mnemonicParsing="false" text="Bupa" />
+                                    <MenuItem mnemonicParsing="false" text="NAB" />
+                                </items>
+                              </MenuButton>
+                              <TextField fx:id="totalInputSix" onAction="#calculateTotal" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <Label fx:id="grandTotalLabel" text="\$000" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item Code" />
+                              <TextField fx:id="billCodeOne" GridPane.rowIndex="1" />
+                              <TextField fx:id="billCodeTwo" GridPane.rowIndex="2" />
+                              <TextField fx:id="billCodeThree" GridPane.rowIndex="3" />
+                              <TextField fx:id="billCodeFour" GridPane.rowIndex="4" />
+                              <TextField fx:id="billCodeFive" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Service Type:" GridPane.columnIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" GridPane.columnIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health Insurance" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total (Deductions)" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grand Total" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="531.0" layoutY="61.0" spacing="60.0" AnchorPane.bottomAnchor="370.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="61.0" />
+                  <VBox layoutX="379.0" layoutY="45.0" spacing="15.0" AnchorPane.bottomAnchor="335.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="45.0" />
+                  <VBox layoutX="848.0" layoutY="45.0" spacing="15.0" AnchorPane.bottomAnchor="335.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="45.0" />
+                  <Button alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="799.0" layoutY="402.0" mnemonicParsing="false" onAction="#insertInvoice" text="Create" textAlignment="CENTER" AnchorPane.bottomAnchor="178.0" />
+                  <GridPane layoutX="79.0" layoutY="315.0" prefHeight="254.0" prefWidth="269.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="114.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="0.0" prefWidth="52.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="64.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="64.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item Code">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Service Type" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="110" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="116" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="132" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="136" GridPane.rowIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11713" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11503" GridPane.rowIndex="6" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12250" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="New consultation" wrappingWidth="103.50711822509766" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Follow-up consultation" wrappingWidth="101.80894470214844" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="New complex consultation" wrappingWidth="104.83232116699219" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Follow-up complex consultation" wrappingWidth="116.13418579101562" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ECG" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lung function test" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep study" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cost" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$100" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$50" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$125" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$75" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$20" wrappingWidth="26.03658676147461" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$50" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$100" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

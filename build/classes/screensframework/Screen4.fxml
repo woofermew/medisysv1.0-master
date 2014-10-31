@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen4Controller">
+   <children>
+      <SplitPane dividerPositions="0.15" layoutX="297.0" layoutY="115.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: skyblue;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="380.0" layoutY="52.0" prefHeight="50.0" prefWidth="530.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="112.0">
+                     <children>
+                        <Button layoutX="175.0" layoutY="72.0" mnemonicParsing="false" onAction="#openCalendarSwing" prefHeight="50.0" prefWidth="105.0" text="Calendar">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="270.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToPatient" prefHeight="50.0" prefWidth="100.0" text="Patient">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="353.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToNotes" prefHeight="50.0" prefWidth="100.0" text="Notes">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="461.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToBilling" prefHeight="50.0" prefWidth="100.0" text="Billing">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="closeButton" layoutX="946.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="14.0" />
+                  <HBox layoutX="729.0" layoutY="39.0" />
+                  <HBox layoutX="763.0" layoutY="20.0" AnchorPane.rightAnchor="113.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label layoutX="763.0" layoutY="20.0" text="Welcome back" />
+                        <Label layoutX="859.0" layoutY="20.0" text="Daniel Chan!" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="276.0" layoutY="77.0" text="GENERIC" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightblue;" />
+        </items>
+      </SplitPane>
+      <ImageView fitHeight="105.0" fitWidth="260.0" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../medisysnavilogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

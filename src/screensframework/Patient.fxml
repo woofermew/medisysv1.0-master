@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.PatientController">
+   <children>
+      <SplitPane dividerPositions="0.15" layoutX="329.0" layoutY="215.0" minHeight="720.0" minWidth="1028.0" orientation="VERTICAL" prefHeight="720.0" prefWidth="1028.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="100.0" minWidth="160.0" onContextMenuRequested="#goToPatientView" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: skyblue;" SplitPane.resizableWithParent="false">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="380.0" layoutY="77.0" prefHeight="50.0" prefWidth="1000.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#goToLanding" prefHeight="50.0" prefWidth="105.0" text="Home">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="175.0" layoutY="72.0" mnemonicParsing="false" onAction="#openCalendarSwing" prefHeight="50.0" prefWidth="105.0" text="Calendar">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="270.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToPatient" prefHeight="50.0" prefWidth="100.0" text="Patient">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="353.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToNotes" prefHeight="50.0" prefWidth="100.0" text="Notes">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="461.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToBilling" prefHeight="50.0" prefWidth="100.0" text="Billing">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="761.0" layoutY="14.0" spacing="10.0" AnchorPane.bottomAnchor="65.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="761.0" layoutY="14.0" spacing="5.0" AnchorPane.bottomAnchor="64.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <Label layoutX="698.0" layoutY="64.0" text="Welcome back" />
+                              <Label layoutX="819.0" layoutY="64.0" text="Doctor" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="closeButton" layoutX="943.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="14.0" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="260.0" layoutY="78.0" prefHeight="25.0" prefWidth="90.0" text="PATIENT" AnchorPane.bottomAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="105.0" fitWidth="250.0" AnchorPane.bottomAnchor="0.0">
+                     <image>
+                        <Image url="@../medisysnavilogo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <HBox layoutX="25.0" layoutY="537.0" spacing="10.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="25.0">
+                     <children>
+                        <Button layoutX="25.0" layoutY="537.0" mnemonicParsing="false" onAction="#goToPatientAdd" text="Add Patient" />
+                        <Button layoutX="127.0" layoutY="537.0" mnemonicParsing="false" onAction="#goViewPatient" text="View Patient" />
+                        <Button mnemonicParsing="false" onAction="#goToClinicalMeasures" text="Clinical Forms" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableview" layoutX="14.0" layoutY="17.0" onMousePressed="#goToPatientView" prefHeight="503.0" prefWidth="1026.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <columns>
+                    </columns>
+                  </TableView>
+                  <HBox layoutX="409.0" layoutY="537.0" spacing="10.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="384.0">
+                     <children>
+                        <TextField fx:id="patSearchString" layoutX="409.0" layoutY="537.0" />
+                        <Button layoutX="583.0" layoutY="537.0" mnemonicParsing="false" onAction="#loadFilteredTable" text="Search" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

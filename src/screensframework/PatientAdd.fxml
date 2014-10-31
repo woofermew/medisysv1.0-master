@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.PatientAddController">
+   <children>
+      <SplitPane dividerPositions="0.15" layoutX="297.0" layoutY="115.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: skyblue;" SplitPane.resizableWithParent="false">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="367.0" layoutY="52.0" prefHeight="50.0" prefWidth="530.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="112.0">
+                     <children>
+                        <Button layoutX="175.0" layoutY="72.0" mnemonicParsing="false" onAction="#openCalendarSwing" prefHeight="50.0" prefWidth="105.0" text="Calendar">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="270.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToPatient" prefHeight="50.0" prefWidth="100.0" text="Patient">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="353.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToNotes" prefHeight="50.0" prefWidth="100.0" text="Notes">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="461.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToBilling" prefHeight="50.0" prefWidth="100.0" text="Billing">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="763.0" layoutY="14.0" spacing="10.0" AnchorPane.bottomAnchor="65.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="763.0" layoutY="20.0" spacing="5.0">
+                           <children>
+                              <Label layoutX="763.0" layoutY="20.0" text="Welcome back" />
+                              <Label layoutX="859.0" layoutY="20.0" text="Doctor!" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="logoutButton" layoutX="946.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToLogin" text="Logout" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="276.0" layoutY="77.0" text="PATIENT" AnchorPane.bottomAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ImageView fitHeight="105.0" fitWidth="250.0" AnchorPane.bottomAnchor="0.0">
+                     <image>
+                        <Image url="@../medisysnavilogo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <HBox alignment="CENTER" layoutX="1.0" layoutY="104.0" prefHeight="297.0" prefWidth="1024.0" spacing="100.0" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
+                     <children>
+                        <GridPane layoutX="75.0" layoutY="104.0" prefHeight="297.0" prefWidth="317.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="110.0" prefWidth="141.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="130.0" prefWidth="169.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="patFirstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="First Name:" GridPane.rowIndex="1" />
+                              <TextField fx:id="patLastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Last Name:" GridPane.rowIndex="2" />
+                              <TextField fx:id="patContactTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="phoneNumber" text="Telephone:" GridPane.rowIndex="3" />
+                              <TextField fx:id="patAddressTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Address:" GridPane.rowIndex="4" />
+                              <Label text="Postcode:" GridPane.rowIndex="6" />
+                              <TextField fx:id="patSuburbTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="patPostcodeTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="patDOBTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label text="D.O.B eg.14/AUG/1085" GridPane.rowIndex="7" />
+                              <Label text="Health Insurance:" GridPane.rowIndex="8" />
+                              <TextField fx:id="patInsuranceTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField fx:id="patMedicareNumTextField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Label text="Medicare #:" GridPane.rowIndex="9" />
+                              <TextField fx:id="patMedicareIDTextField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <Label text="Medicare ID:" GridPane.rowIndex="10" />
+                              <Label text="Add Patient" underline="true" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suburb:" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="471.0" layoutY="129.0" prefHeight="246.0" prefWidth="303.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="130.0" prefWidth="130.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField prefHeight="26.0" prefWidth="121.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField prefHeight="26.0" prefWidth="143.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Referral Atthacment:" GridPane.rowIndex="8" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GP Details:" underline="true" />
+                              <Button mnemonicParsing="false" text="Attach" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suburb:" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title:" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postcode:" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <Button layoutX="813.0" layoutY="415.0" mnemonicParsing="false" onAction="#insertPatient" text="Create" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
